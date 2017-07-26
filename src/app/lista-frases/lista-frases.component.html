@@ -1,0 +1,9 @@
+<p>
+  lista-frases works!
+</p>
+{{ paramsID.elid }}
+<app-frase [frase]="{frase:'EL parametro es'}"></app-frase>
+
+<div *ngFor="let f of frases">
+  <app-frase [frase]="f" (onDelete)="fraseEliminada($event)"></app-frase>
+</div>
