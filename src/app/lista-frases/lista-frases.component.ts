@@ -8,16 +8,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ListaFrasesComponent implements OnInit {
   frases: Array<any>;
-  paramsID:any = {};
-  constructor(private router:ActivatedRoute) {
-      this.frases = [
-        { frase: "Hola" },
-        { frase: "Hola que pasa" },
-        { frase: "Has visto a marc" },
-        { frase: "Yo voy a pelo" },
-        { frase: "¿Esto es como un middleware?" }
-      ];
-      console.log("El componente se ha construido");
+  paramsID: any = {};
+  constructor(private router: ActivatedRoute) {
+    this.frases = [
+      { frase: "Hola" },
+      { frase: "Hola que pasa" },
+      { frase: "Has visto a marc" },
+      { frase: "Yo voy a pelo" },
+      { frase: "¿Esto es como un middleware?" }
+    ];
+    console.log("El componente se ha construido");
   }
 
   ngOnInit() {
@@ -27,9 +27,9 @@ export class ListaFrasesComponent implements OnInit {
     });
   }
 
-  fraseEliminada(e: any){
+  fraseEliminada(e: any) {
     console.log("No, Luke, yo soy tu padre");
     console.log(e);
-    this.frases = this.frases.filter( f => f.frase != e.frase);
+    this.frases = this.frases.filter(f => f.frase != e.frase);
   }
 }
